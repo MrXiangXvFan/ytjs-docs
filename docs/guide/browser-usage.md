@@ -1,5 +1,5 @@
 :::warning 
-Due to recent changes in the InnerTube API, the examples provided below may not work as expected. Please refer to [https://github.com/LuanRT/yt-sabr-shaka-demo](https://github.com/LuanRT/yt-sabr-shaka-demo) for a more up-to-date implementation.
+This example is outdated. Please check out [kira](https://github.com/LuanRT/kira) or [sabr-shaka-example](https://github.com/LuanRT/googlevideo/tree/main/examples/sabr-shaka-example) for up-to-date browser usage.
 :::
 
 # Browser Usage

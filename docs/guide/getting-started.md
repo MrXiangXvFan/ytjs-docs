@@ -113,3 +113,32 @@ const innertube = await Innertube.create(/* options */);
 #### `fetch` (FetchFunction)
 - **Description**: Custom fetch implementation.
 - **Default**: `fetch`
+
+## Providing a Custom JavaScript Interpreter
+
+Some features, such as deciphering streaming URLs, require executing YouTube's obfuscated JavaScript code. YouTube.js does **not** include a built-in interpreter for this purpose, so you must provide your own.
+
+Below is an example using JavaScript's `Function` constructor:
+
+```ts
+import { Innertube, Platform, Types } from 'youtubei.js/web';
+
+Platform.shim.eval = async (data: Types.BuildScriptResult, env: Record<string, Types.VMPrimative>) => {
+  const properties = [];
+
+  if(env.n) {
+    properties.push(`n: exportedVars.nFunction("${env.n}")`)
+  }
+
+  if (env.sig) {
+    properties.push(`sig: exportedVars.sigFunction("${env.sig}")`)
+  }
+
+  const code = `${data.output}\nreturn { ${properties.join(', ')} }`;
+
+  return new Function(code)();
+}
+
+const innertube = await Innertube.create(/* options */);
+// ...
+```

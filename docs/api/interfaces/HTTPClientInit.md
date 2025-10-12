@@ -2,12 +2,12 @@
 
 # Interface: HTTPClientInit
 
+Defined in: [src/utils/HTTPClient.ts:13](https://github.com/LuanRT/YouTube.js/blob/0733f60b57877f6b8b87dfd5cc6195b5085f5c09/src/utils/HTTPClient.ts#L13)
+
 ## Properties
 
 ### baseURL?
 
 > `optional` **baseURL**: `string`
 
-#### Defined in
-
-[src/utils/HTTPClient.ts:14](https://github.com/LuanRT/YouTube.js/blob/af92984523f90200a18314b94478a2697c9deab0/src/utils/HTTPClient.ts#L14)
+Defined in: [src/utils/HTTPClient.ts:14](https://github.com/LuanRT/YouTube.js/blob/0733f60b57877f6b8b87dfd5cc6195b5085f5c09/src/utils/HTTPClient.ts#L14)
